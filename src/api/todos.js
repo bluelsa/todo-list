@@ -30,6 +30,7 @@ export const patchTodo = async (payload) => {
       title,
       isDone
     })
+    return res.data;
   } catch (error) {
     console.error('[Patch Todo failed]:', error)
   }
