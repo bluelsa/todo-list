@@ -8,16 +8,17 @@ import { ACLogoIcon } from 'assets/images';
 import { AuthInput } from 'components';
 import { useState } from 'react';
 import { login } from '../api/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const LoginPage = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const handleClick = async () => {
-    if (username.length === 0) return
-    if(password.length === 0) return
+    if (username.length === 0) return;
+    if (password.length === 0) return;
     const { success, authToken } = await login({
       username,
       password,
@@ -29,9 +30,10 @@ const LoginPage = () => {
         icon: 'success',
         showConfirmButton: false,
         timer: 1500,
-        position: 'top'
+        position: 'top',
       });
-      return
+      navigate('/todo');
+      return;
     }
 
     Swal.fire({
@@ -67,7 +69,9 @@ const LoginPage = () => {
           onChange={(passwordInputValue) => setPassword(passwordInputValue)}
         />
       </AuthInputContainer>
-      <AuthButton onClick={handleClick}>登入</AuthButton>
+      <AuthButton onClick={handleClick}>
+        登入
+      </AuthButton>
       <Link to="/signup">
         <AuthLinkText>註冊</AuthLinkText>
       </Link>

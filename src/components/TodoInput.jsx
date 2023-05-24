@@ -83,8 +83,8 @@ const TodoInput = ({ inputValue, onChange, onKeyDown, onAddTodo }) => {
           onChange={(e) => {
             onChange?.(e.target.value);
           }}
-          onKeyDown={(event) => {
-            if (event.key === 'Enter') {
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
               onKeyDown?.();
             }
           }}
