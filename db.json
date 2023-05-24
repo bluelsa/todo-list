@@ -6,29 +6,24 @@
       "id": 1
     },
     {
-      "title": "Learn to create custom hooks",
-      "isDone": false,
-      "id": 2
-    },
-    {
       "title": "Learn to use context",
       "isDone": true,
-      "id": 3
+      "id": 2
     },
     {
       "title": "Learn to implement auth",
       "isDone": false,
-      "id": 4
+      "id": 3
     },
     {
       "title": "Learn something new",
       "isDone": true,
-      "id": 5
+      "id": 4
     },
     {
       "title": "new data",
       "isDone": false,
-      "id": 6
+      "id": 5
     }
   ]
 }
