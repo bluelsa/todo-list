@@ -7,7 +7,7 @@ function App() {
     <div className="app">
       <BrowserRouter>
         <Routes>
-          <Route path="log" element={<LoginPage />} />
+          <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignUpPage />} />
           <Route path="todo" element={<TodoPage />} />
           <Route path="*" element={<HomePage />} />
