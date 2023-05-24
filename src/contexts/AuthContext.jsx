@@ -3,14 +3,6 @@ import { createContext, useState, useEffect, useContext} from 'react'
 import * as jwt from 'jsonwebtoken'
 import { useLocation } from 'react-router-dom'
 
-// const defaultAuthContext = {
-//   isAuthenticated: false,
-//   currentMember: null,
-//   register: null,
-//   login: null,
-//   logout: null
-// }
-
 const AuthContext = createContext(null)
 
 export const useAuth = () => useContext(AuthContext)
@@ -28,6 +20,7 @@ export const AuthProvider = ({ children }) => {
       if (!authToken) {
         setPayload(null)
         setIsAuthenticated(false)
+        return
       }
       const result = await checkPermission(authToken);
       if (result) {
@@ -47,7 +40,7 @@ export const AuthProvider = ({ children }) => {
 
     currentMember: payload,
 
-    register: async ({data}) => {
+    register: async (data) => {
       const { success, authToken } = await register({
         username: data.username,
         email: data.email,
@@ -57,6 +50,7 @@ export const AuthProvider = ({ children }) => {
       if(tempPayload) {
         setPayload(tempPayload)
         setIsAuthenticated(true)
+        localStorage.setItem('authToken', authToken)
       } else {
         setPayload(null)
         setIsAuthenticated(false)
@@ -64,7 +58,7 @@ export const AuthProvider = ({ children }) => {
       return success
     },
 
-    login: async ({data}) => {
+    login: async (data) => {
       const { success, authToken } = await login({
         username: data.username,
         password: data.password,
