@@ -1,7 +1,7 @@
 Todo list
 ====
-此專案使用React框架製作 Todo list 備忘記事網站
-包含log in頁面, sign up頁面, 以及todo list顯示頁面
+此專案使用React框架製作 Todo list 備忘記事網站  
+包含log in頁面, sign up頁面, 以及todo list顯示頁面  
 在個人todo list中可以新增、修改及刪除備忘事項
 
 
