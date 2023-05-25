@@ -22,6 +22,9 @@ npm install
 ```
 npm start 
 ```
+```
+npm run dev-server
+```
 
 terminal 顯示網址 http://localhost:3000 表示啟動成功，打開瀏覽器進入此網址
 
