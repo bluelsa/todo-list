@@ -1,18 +1,20 @@
 Todo list
 ====
-此專案使用React框架製作Todo list頁面
+此專案使用React框架製作 Todo list 備忘記事網站
+包含log in頁面, sign up頁面, 以及todo list顯示頁面
+在個人todo list中可以新增、修改及刪除備忘事項
 
 
 安裝
 --
 1. 開啟Terminal終端機，將專案clone到本機伺服器<br>
 ```
-git clone https://github.com/bluelsa/alpha-shop
+git clone https://github.com/bluelsa/todo-list
 ```
 2. 初始<br>
 * 切至專案資料夾
 ```
-cd 
+cd todo-list
 ```
 * 安裝套件<br>
 ```
