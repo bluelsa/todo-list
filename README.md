@@ -12,7 +12,7 @@ git clone https://github.com/bluelsa/alpha-shop
 2. 初始<br>
 * 切至專案資料夾
 ```
-cd alpha-shop
+cd 
 ```
 * 安裝套件<br>
 ```
