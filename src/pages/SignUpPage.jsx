@@ -46,7 +46,8 @@ const SignUpPage = () => {
 
   useEffect(() => {
     if (isAuthenticated) {
-      navigate('/todo');
+      localStorage.removeItem('authToken')
+      navigate('/login'); //註冊成功後navigate至login page重新登入感覺較符合邏輯
     }
   }, [navigate, isAuthenticated]);
 

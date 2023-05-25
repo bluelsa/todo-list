@@ -21,6 +21,7 @@ const StyledGreetingText = styled.div`
   }
 `;
 
+
 const Header = ({ username }) => {
   return (
     <StyledHeader>
